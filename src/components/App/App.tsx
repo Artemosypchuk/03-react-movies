@@ -55,7 +55,7 @@ export default function App() {
       <Toaster position="top-center" reverseOrder={false} />
       <SearchBar onSubmit={handleSearchSubmit} />
       {loading && <Loader />}
-      {isError && !loading && <ErrorMessage type="empty" />}
+      {isError && !loading && <ErrorMessage />}
       {!loading && !isError && movies.length > 0 && (
         <MovieGrid movies={movies} onSelect={setSelectedMovie} />
       )}
