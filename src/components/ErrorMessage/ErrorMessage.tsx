@@ -5,7 +5,6 @@ interface ErrorMessageProps {
 }
 
 export default function ErrorMessage({ type }: ErrorMessageProps) {
-    console.log('errrooorrraaa')
   return (
     <p className={css.text}>
       {type === "empty" ?
