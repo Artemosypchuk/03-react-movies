@@ -8,7 +8,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import MovieGrid from "../MovieGrid/MovieGrid";
 import MovieModal from "../MovieModal/MovieModal";
 
-import type Movie from "../../types/movie";
+import type {Movie} from "../../types/movie";
 import { searchMovies } from "../../services/movieService";
 
 export default function App() {
