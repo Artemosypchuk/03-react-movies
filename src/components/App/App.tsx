@@ -19,7 +19,11 @@ export default function App() {
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
   useEffect(() => {
-    if (!query) return;
+    if (!query){
+        setIsError(false);
+        setMovies([]);
+        return
+    };
     async function fetchMovies(): Promise<void> {
       try {
         setLoading(true);
@@ -37,7 +41,6 @@ export default function App() {
         console.error(error);
       } finally {
         setLoading(false);
-        setIsError(false);
       }
     }
 
